@@ -9,15 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/demo/user/v1/api/")
 public class DemoRestController {
 
-  /*  //@GetMapping("/name")
-    @RequestMapping("/uname")
-    public String getName(){
-        return "Subhasis Roy";
-    }*/
+    ///// How to make the call from controller.
+    ///// Discuss with Durga
 
-   // demoRestService.getAllUser();
-
-    @Autowired
-    DemoRestService demoRestService;
 
 }
