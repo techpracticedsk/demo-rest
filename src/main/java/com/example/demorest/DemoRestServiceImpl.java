@@ -2,6 +2,7 @@ package com.example.demorest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 public class DemoRestServiceImpl implements DemoRestService {
 
@@ -13,4 +14,12 @@ public class DemoRestServiceImpl implements DemoRestService {
         System.out.println("I m inside...get all users...");
         Iterable itr = userRepoInterface.findAll();
     }
+
+    @RequestMapping("/add/user")
+    public void addUser() {
+        User usr= new User();
+        usr.setFName("subhasis");
+        usr.setEmail("test@email.com");
+    }
+
 }
