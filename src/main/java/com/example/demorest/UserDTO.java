@@ -11,7 +11,7 @@ import java.io.Serializable;
 @Setter
 @NoArgsConstructor
 public class UserDTO implements Serializable {
-    long userid;
+    Long userid;
     String email;
     String name;
 

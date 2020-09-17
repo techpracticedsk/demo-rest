@@ -1,9 +1,7 @@
 package com.example.demorest;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/demo/user/v1/api/")
@@ -17,12 +15,14 @@ public class DemoRestController {
 
     @GetMapping("/allusers")
     public void getAllUser(){
-        demoRestService.addUser();
+        demoRestService.getAllUser();
     }
 
 
     @RequestMapping("/add/user")
-    public void addUserToDB(){
-        demoRestService.addUser();
+    @PostMapping
+    public void addUserToDB(@RequestBody UserDTO userDTO){
+
+        demoRestService.addUser(userDTO);
     }
 }

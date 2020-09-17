@@ -1,13 +1,14 @@
 package com.example.demorest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.ArrayList;
 import java.util.List;
 
-
+@Service
 public class DemoRestServiceImpl implements DemoRestService {
 
     @Autowired
@@ -31,11 +32,12 @@ public class DemoRestServiceImpl implements DemoRestService {
     }
 
 
-    public void addUser() {
-        User usr= new User();
-        usr.setFName("test-user1");
-        usr.setEmail("test@email.com");
-        usr.setCity("Bangalore");
+    public void addUser(UserDTO utd) {
+
+        User usr = new User();
+        //usr.setUserId(utd.getUserid());
+        usr.setEmail(utd.getEmail());
+        usr.setFName(utd.getName());
         userRepoInterface.save(usr);
         //Discuss with Durga
     }
