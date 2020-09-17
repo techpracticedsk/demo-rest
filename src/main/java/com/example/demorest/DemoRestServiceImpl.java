@@ -13,7 +13,7 @@ public class DemoRestServiceImpl implements DemoRestService {
     @Autowired
     UserRepository userRepoInterface;
 
-    @GetMapping("/allusers")
+
     public List<UserDTO> getAllUser() {
 
         List<UserDTO> custList = new ArrayList<UserDTO>();
@@ -30,7 +30,7 @@ public class DemoRestServiceImpl implements DemoRestService {
 
     }
 
-    @RequestMapping("/add/user")
+
     public void addUser() {
         User usr= new User();
         usr.setFName("test-user1");

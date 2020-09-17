@@ -12,5 +12,17 @@ public class DemoRestController {
     ///// How to make the call from controller.
     ///// Discuss with Durga
 
+    @Autowired
+    DemoRestService demoRestService;
 
+    @GetMapping("/allusers")
+    public void getAllUser(){
+        demoRestService.addUser();
+    }
+
+
+    @RequestMapping("/add/user")
+    public void addUserToDB(){
+        demoRestService.addUser();
+    }
 }
