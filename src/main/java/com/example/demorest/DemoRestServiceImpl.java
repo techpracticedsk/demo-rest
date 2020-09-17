@@ -25,7 +25,6 @@ public class DemoRestServiceImpl implements DemoRestService {
             utd.setName(user.getFName());
             custList.add(utd);
         });
-        //How to return List - discuss with Durga
 
         return custList;
 
@@ -40,7 +39,7 @@ public class DemoRestServiceImpl implements DemoRestService {
         usr.setFName(utd.getName());
         usr.setCity(utd.getCity());
         userRepoInterface.save(usr);
-        //Discuss with Durga
+
     }
 
 }
