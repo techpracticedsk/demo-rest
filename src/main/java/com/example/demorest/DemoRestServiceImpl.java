@@ -34,10 +34,11 @@ public class DemoRestServiceImpl implements DemoRestService {
 
     public void addUser(UserDTO utd) {
 
+        System.out.println(" ---> "+utd.getName());
         User usr = new User();
-        //usr.setUserId(utd.getUserid());
         usr.setEmail(utd.getEmail());
         usr.setFName(utd.getName());
+        usr.setCity(utd.getCity());
         userRepoInterface.save(usr);
         //Discuss with Durga
     }
