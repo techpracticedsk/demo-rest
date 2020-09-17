@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -14,13 +15,18 @@ public class DemoRestServiceImpl implements DemoRestService {
 
     @GetMapping("/allusers")
     public List<UserDTO> getAllUser() {
-        UserDTO utd = new UserDTO();
-        userRepoInterface.findAll().stream().forEach(user -> {
 
+        List<UserDTO> custList = new ArrayList<UserDTO>();
+        userRepoInterface.findAll().stream().forEach(user -> {
+            UserDTO utd = new UserDTO();
+            utd.setEmail(user.getEmail());
+            utd.setUserid(user.getUserId());
+            utd.setName(user.getFName());
+            custList.add(utd);
         });
         //How to return List - discuss with Durga
 
-        return null;
+        return custList;
 
     }
 
