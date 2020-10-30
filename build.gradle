@@ -19,6 +19,8 @@ dependencies {
 	compile group: 'com.h2database', name: 'h2', version: '1.4.200'
 	annotationProcessor 'org.projectlombok:lombok'
 	runtimeOnly 'mysql:mysql-connector-java'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 
 	compile group: 'org.springdoc', name:'springdoc-openapi-ui', version: '1.2.32'
 	

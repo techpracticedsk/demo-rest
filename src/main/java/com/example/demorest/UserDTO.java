@@ -16,4 +16,13 @@ public class UserDTO implements Serializable {
     String name;
     String city;
 
+    @Override
+    public String toString() {
+        return "UserDTO{" +
+                "userid=" + userid +
+                ", email='" + email + '\'' +
+                ", name='" + name + '\'' +
+                ", city='" + city + '\'' +
+                '}';
+    }
 }

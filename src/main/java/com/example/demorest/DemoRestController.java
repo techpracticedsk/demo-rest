@@ -24,9 +24,15 @@ public class DemoRestController {
     @RequestMapping("/add/user")
     @PostMapping
     public ResponseEntity<UserDTO> addUserToDB(@RequestBody UserDTO userDTO){
-
         demoRestService.addUser(userDTO);
         return new ResponseEntity<UserDTO>(userDTO, HttpStatus.OK);
+    }
+
+
+
+   @GetMapping("/usercities")
+    public List<String> getAllUserCities(){
+        return demoRestService.getAllUserCities();
     }
 
 
