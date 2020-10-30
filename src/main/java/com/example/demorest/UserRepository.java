@@ -18,4 +18,5 @@ public interface UserRepository extends JpaRepository<User, Long> {
    List<Object[]>  findUsersByFirstName(@Param("fName")String firstName);
 
 
+
 }
