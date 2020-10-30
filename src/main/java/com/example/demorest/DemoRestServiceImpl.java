@@ -51,8 +51,7 @@ public class DemoRestServiceImpl implements DemoRestService {
     public List<String> getUsersByFirstName(String firstName) {
       userRepoInterface.findUsersByFirstName(firstName).stream().forEach(obj->
       {
-         System.out.println(obj[0].toString());
-         System.out.println(obj[1].toString());
+         System.out.println("First Name : "+obj[0].toString() + " and City : " +obj[1].toString());
       });
         return null;
     }

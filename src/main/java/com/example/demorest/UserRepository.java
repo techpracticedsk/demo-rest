@@ -14,7 +14,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
    @Query(value = "select city from User", nativeQuery = true)
    List<Object[]>  findAllUserCities();
 
-   @Query(value = "select fName, city, email from User where fName=:fName", nativeQuery = true)
+   @Query(value = "select f_name, city, email from User where f_name=:fName", nativeQuery = true)
    List<Object[]>  findUsersByFirstName(@Param("fName")String firstName);
 
 
